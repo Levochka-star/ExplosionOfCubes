@@ -1,12 +1,10 @@
 using UnityEngine;
 
-public class SpawnObjects : MonoBehaviour
+public class CubeSpawner : MonoBehaviour
 {
     [SerializeField] private Cube _prefabCube;
 
     [SerializeField] private Raycast _raycast;
-
-    public event System.Action<RaycastHit> CubeDestroed;
 
     private int _minChanceSpawn = 0;
     private int _maxChanceSpawn = 6;
@@ -29,8 +27,7 @@ public class SpawnObjects : MonoBehaviour
     {
         if (hit.collider.TryGetComponent(out Cube cube))
         {
-            Debug.Log("get component true");
-            if (RoolChanceSpawn(cube.SpawnChance))
+           if (RoolChanceSpawn(cube.SpawnChance))
             {
                 int nuber = Random.Range(_minChanceSpawn, _maxChanceSpawn);
 
@@ -42,8 +39,6 @@ public class SpawnObjects : MonoBehaviour
         }
 
         Destroy(hit.collider.gameObject);
-
-        CubeDestroed?.Invoke(hit);
     }
 
     private void Spawn(RaycastHit hit, float SpawnChance)
@@ -52,11 +47,8 @@ public class SpawnObjects : MonoBehaviour
 
         Cube clone = Instantiate(_prefabCube, hit.point, hit.collider.gameObject.transform.rotation);
 
-
-        clone.name += Random.Range(0, 10).ToString();
-
         clone.SetSpawnChance(SpawnChance);
-        clone.SetTransform(hit.transform.localScale * _multipleLocalScale);
+        clone.SetScale(hit.transform.localScale * _multipleLocalScale);
     }
 
     private bool RoolChanceSpawn(float chance)

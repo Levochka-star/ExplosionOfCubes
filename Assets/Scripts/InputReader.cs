@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class InputUser : MonoBehaviour
+public class InputReader : MonoBehaviour
 {
     private KeyCode _clikedOnCube = KeyCode.Mouse2;
 
@@ -11,7 +11,6 @@ public class InputUser : MonoBehaviour
     {
         if (Input.GetKeyDown(_clikedOnCube))
         {
-            Debug.Log("button pressed");
             Clicking?.Invoke(Input.mousePosition);
         }
     }

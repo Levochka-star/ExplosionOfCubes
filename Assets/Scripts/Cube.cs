@@ -9,9 +9,9 @@ public class Cube : MonoBehaviour
         SpawnChance = valueChance;
     }
 
-    public void SetTransform(Vector3 valueScale)
+    public void SetScale(Vector3 vector3)
     {
-        transform.localScale = valueScale;
+        transform.localScale = vector3;
        
     }
 }

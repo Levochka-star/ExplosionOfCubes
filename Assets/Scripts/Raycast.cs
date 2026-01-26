@@ -4,7 +4,7 @@ using UnityEngine;
 public class Raycast : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
-    [SerializeField] private InputUser _inputUser;
+    [SerializeField] private InputReader _inputUser;
 
     public event Action<RaycastHit> UserClicedOnCube;
 
@@ -25,10 +25,10 @@ public class Raycast : MonoBehaviour
 
         if (Physics.Raycast(_ray, out RaycastHit hit))
         {
-            Debug.Log("logic raycast true");
-
-            if (hit.collider.gameObject.TryGetComponent<Cube>(out var cube))
+           if (hit.collider.gameObject.TryGetComponent<Cube>(out var cube))
+            {
                 UserClicedOnCube?.Invoke(hit);
+            }
         }
     }
 }

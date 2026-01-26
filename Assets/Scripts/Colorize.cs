@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof (Renderer))]
 
-public class ColorSwich: MonoBehaviour
+public class Colorize: MonoBehaviour
 {
     private Renderer _renderer;
     

@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class Detonator : MonoBehaviour
 {
-    [SerializeField] private SpawnObjects _spawnObjects;
+    [SerializeField] private Raycast _raycast;
     
     [SerializeField] private float _radius = 500.0F;
     [SerializeField] private float _power = 1000.0F;
 
     private void OnEnable()
     {
-        _spawnObjects.CubeDestroed += Work;
+        _raycast.UserClicedOnCube += Work;
     }
 
     private void OnDisable()
     {
-        _spawnObjects.CubeDestroed -= Work;
+        _raycast.UserClicedOnCube -= Work;
     }
 
     private void Work(RaycastHit hit)

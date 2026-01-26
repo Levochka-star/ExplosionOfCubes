@@ -303,6 +303,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.208
       objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -413,6 +421,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.772
       objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -469,6 +485,14 @@ PrefabInstance:
     - target: {fileID: 7595783483056031191, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.208
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -770,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca113e485f2bdaecb26e7efbcb689f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnObjects: {fileID: 963194229}
+  _raycast: {fileID: 963194230}
   _radius: 500
   _power: 1000
 --- !u!1 &1228141279
@@ -930,6 +954,14 @@ PrefabInstance:
     - target: {fileID: 7595783483056031191, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.622
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187568567701383172, guid: 48a1fe4fd214f1f93a9f9ad09beb4ddc, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
